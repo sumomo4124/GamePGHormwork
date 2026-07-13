@@ -18,7 +18,7 @@ public class GameSceneController : MonoBehaviour
     void Start()
     {
         // プレハブだけ指定すると座標などはプレハブの情報がそのまま使われる
-        Instantiate(gameStartPrefab);
+        Instantiate(gameStartPrefab,new Vector2(0f,4f), Quaternion.identity);
     }
 
     // Update is called once per frame

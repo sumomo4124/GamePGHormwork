@@ -12,7 +12,7 @@ public class BossController : MonoBehaviour
     }
 
     public GameObject explosionPrefab = null;
-    int life = 1;
+    int life = 50;
     State state = State.Apear;  // Œ»İ‚Ìó‘Ô
     float timer = 0.0f;
     float effectTimer = 0.0f;

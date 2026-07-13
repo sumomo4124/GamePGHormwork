@@ -14,7 +14,7 @@ public class PlayerBulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speed = 3.0f;
+        float speed = 9.0f;
 
         transform.Translate(speed * Time.deltaTime, 0.0f, 0.0f);
 

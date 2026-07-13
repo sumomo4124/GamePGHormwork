@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class EnemyFactoryController : MonoBehaviour
@@ -35,7 +36,9 @@ public class EnemyFactoryController : MonoBehaviour
 
 	public void CreateBoss()
 	{
-		if (isCreatedBoss == false)
+        TextMeshProUGUI tmpro = GetComponent<TextMeshProUGUI>();
+
+        if (isCreatedBoss == false)
 		{
 			// Bossを作る
 			// Instatiateを使う
@@ -43,8 +46,9 @@ public class EnemyFactoryController : MonoBehaviour
 			// Bossプレハブがないからメンバ変数に追加する
 			Instantiate(bossPrefab, transform.position, Quaternion.identity);
 
-			//Bossの生成は一度でいいためここでIsCreatedBossをtrueにする
-			isCreatedBoss = true;
+            //Bossの生成は一度でいいためここでIsCreatedBossをtrueにする
+            isCreatedBoss = true;
+
 		}
 	}
 

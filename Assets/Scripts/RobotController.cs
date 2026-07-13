@@ -318,14 +318,14 @@ public class RobotController : MonoBehaviour
 
 	void Update()
 	{
-		float speed = 1.0f;
+		float speed = 5.0f;
 		float move = speed * Time.deltaTime;
 		float move_x = 0.0f;
 		float move_y = 0.0f;
 
 		if (isBoost == true)
 		{
-			move *= 2.0f;
+			speed += 10.0f;
 		}
 
 		if (Input.GetKey(KeyCode.UpArrow))//上に進む
@@ -403,6 +403,7 @@ public class RobotController : MonoBehaviour
 		{
 			engineFireObj.GetComponent<Renderer>().enabled = true;          // 時間加算
 			boostTimer += Time.deltaTime;
+			isBoost = true;
 		}
 		else
 		{
@@ -418,6 +419,7 @@ public class RobotController : MonoBehaviour
 					// ブースト終了
 					boostTimer = 0.0f;
 					engineFireObj.GetComponent<Renderer>().enabled = false;
+					isBoost = false;
 				}
 			}
 		}
