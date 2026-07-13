@@ -75,7 +75,7 @@ public class BossController : MonoBehaviour
     void Apear()
     {
 		float speed = 0.5f;
-		float stop_pos = 7.0f;
+		float stop_pos = 6.0f;
 
 		if (transform.position.x > stop_pos)
 		{
@@ -118,8 +118,8 @@ public class BossController : MonoBehaviour
         {
             Vector3 pos = transform.position;
 
-            pos.x += Random.Range(-2.0f, 2.0f);
-            pos.y += Random.Range(-2.0f, 2.0f);
+            pos.x += Random.Range(-3.0f, 3.0f);
+            pos.y += Random.Range(-4.0f, 4.0f);
             //Random.Rangeで生成した値を座標に代入し、そのランダムな位置にexplosionPrefabを生成する
             Instantiate(explosionPrefab, pos, Quaternion.identity);
 

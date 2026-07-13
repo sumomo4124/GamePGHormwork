@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class PlayerBulletController : MonoBehaviour
 {
     public GameObject robotObject = null;
+    public GameObject effectPrefab = null;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,6 +52,7 @@ public class PlayerBulletController : MonoBehaviour
 		}
         else if (collision.tag == "Boss")
         {
+            Instantiate(effectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 	}
